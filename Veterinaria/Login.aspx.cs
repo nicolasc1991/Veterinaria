@@ -13,7 +13,7 @@ namespace Veterinaria
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         protected void btnIngresar_Click(object sender, EventArgs e)
@@ -22,7 +22,6 @@ namespace Veterinaria
 
             if (objEmpleado != null)
             {
-                Response.Write("<script>alert('USUARIO CORRECTO')</script>");
                 Response.Redirect("PanelGeneral.aspx");
             }
             else
