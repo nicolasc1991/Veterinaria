@@ -22,7 +22,7 @@ namespace CapaAccesoDatos
         }
 
         #endregion
-        public SqlConnection ConexionBD()
+        public SqlConnection ConexionDB()
         {
             SqlConnection conexion = new SqlConnection();
             conexion.ConnectionString = "Data Source=DESKTOP-BP1L1NA\\SQLEXPRESS; Initial Catalog=Veterinaria; User ID=sa; Password=hanagara";
