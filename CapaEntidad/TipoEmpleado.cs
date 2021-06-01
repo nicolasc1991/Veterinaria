@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaEntidades
+namespace CapaEntidad
 {
     public class TipoEmpleado
     {
@@ -12,7 +12,10 @@ namespace CapaEntidades
         public String Descripcion { get; set; }
         public bool Estado { get; set; }
 
-        public TipoEmpleado(){}
+        public TipoEmpleado()
+        {
+
+        }
         public TipoEmpleado(int ID, string Descripcion, bool Estado)
         {
             this.ID = ID;
@@ -21,4 +24,3 @@ namespace CapaEntidades
         }
     }
 }
-

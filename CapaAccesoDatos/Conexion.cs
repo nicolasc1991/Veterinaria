@@ -25,7 +25,7 @@ namespace CapaAccesoDatos
         public SqlConnection ConexionDB()
         {
             SqlConnection conexion = new SqlConnection();
-            conexion.ConnectionString = "Data Source=DESKTOP-BP1L1NA\\SQLEXPRESS; Initial Catalog=Veterinaria; User ID=sa; Password=hanagara";
+            conexion.ConnectionString = "Data Source=SQL5097.site4now.net;Initial Catalog=db_a7554f_veterinaria;User Id=db_a7554f_veterinaria_admin;Password=veterinaria2021";
             return conexion
     ; ;
         }

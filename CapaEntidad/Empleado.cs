@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaEntidades
+namespace CapaEntidad
 {
     public class Empleado
     {
@@ -19,7 +19,10 @@ namespace CapaEntidades
         public String Usuario { get; set; }
         public String Clave { get; set; }
 
-        public Empleado() { }
+        public Empleado()
+        {
+
+        }
 
         public Empleado(int ID, TipoEmpleado RTipoEmpleado, String Nombre, String ApPaterno, String ApMaterno, String NroDocumento, bool Estado, String Imagen, String Usuario, String Clave)
         {
