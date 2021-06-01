@@ -23,6 +23,7 @@ namespace Veterinaria
             if (objEmpleado != null)
             {
                 Response.Write("<script>alert('USUARIO CORRECTO')</script>");
+                Response.Redirect("PanelGeneral.aspx");
             }
             else
             {
