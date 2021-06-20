@@ -20,11 +20,23 @@ namespace Veterinaria
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            Empleado objEmpleado = EmpleadoLN.getInstance().AccesoSistema(txtUsuario.Text, txtPassword.Text);
-
+            Empleado objEmpleado = EmpleadoLN.getInstance().AccesoSistema(txtUsuario.Text, GenerarMD5.crearMD5(txtPassword.Text));
+            
             if (objEmpleado != null)
             {
-                Response.Redirect("PanelGeneral.aspx");
+                Session["Usuario"] = objEmpleado.Usuario;
+                Session["ID"] = objEmpleado.ID;
+                Session["Nombre"] = objEmpleado.Nombre;
+                Session["Apellidos"] = objEmpleado.ApPaterno + " " + objEmpleado.ApMaterno;
+                Session["Estado"] = objEmpleado.Estado;
+                if (objEmpleado.Estado == true)
+                {
+                    Response.Redirect("PanelGeneral.aspx");
+                }
+                else
+                {
+                    Response.Write("<script>alert('USUARIO INACTIVO')</script>");
+                }
             }
             else
             {

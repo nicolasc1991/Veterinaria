@@ -4,8 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Veterinaria.Custom;
-using System.Web.Services;
 
 namespace Veterinaria
 {
@@ -13,20 +11,10 @@ namespace Veterinaria
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (!IsPostBack)
+            if(Session["ID"] == null)
             {
-
+                Response.Redirect("Login.aspx");
             }
         }
-
-        [WebMethod]
-        public static bool Logout()
-        {
-            HttpContext.Current.Session.Clear();
-            HttpContext.Current.Session.Abandon();
-            return true;
-        }
-
     }
 }

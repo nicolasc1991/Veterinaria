@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DiagnosticoLN.cs" />
     <Compile Include="EmpleadoLN.cs" />
+    <Compile Include="md5.cs" />
     <Compile Include="PacienteLN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

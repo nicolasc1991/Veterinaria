@@ -17,6 +17,10 @@ namespace Veterinaria
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["ID"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             if (!Page.IsPostBack)
             {
                 // Page.ClientScript.RegisterClientScriptInclude("pacientejs", "js/paciente.js");
