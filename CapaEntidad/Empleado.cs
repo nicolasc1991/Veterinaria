@@ -10,6 +10,7 @@ namespace CapaEntidad
     {
         public int ID { get; set; }
         public TipoEmpleado RTipoEmpleado { get; set; }
+        public int IdTipoEmpleado {get; set;}
         public String Nombre { get; set; }
         public String ApPaterno { get; set; }
         public String ApMaterno { get; set; }

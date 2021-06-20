@@ -11,7 +11,10 @@ namespace Veterinaria
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(Session["ID"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
     }
 }
