@@ -35,11 +35,11 @@ namespace CapaLogica
             }
         }
 
-        public List<Paciente> ListarPacientes()
+        public List<Paciente> listarPacientes()
         {
             try
             {
-                return PacienteDAO.getInstance().ListarPacientes();
+                return PacienteDAO.getInstance().listarPacientes();
             }
             catch (Exception ex)
             {

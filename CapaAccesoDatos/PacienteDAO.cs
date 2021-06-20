@@ -61,7 +61,7 @@ namespace CapaAccesoDatos
             return response;
         }
 
-        public List<Paciente> ListarPacientes()
+        public List<Paciente> listarPacientes()
         {
             List<Paciente> Lista = new List<Paciente>();
             SqlConnection con = null;
@@ -73,7 +73,7 @@ namespace CapaAccesoDatos
                 con = Conexion.getInstance().ConexionDB();
                 cmd = new SqlCommand("spListarPacientes", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                con.Open();
+                //con.Open();
                 dr = cmd.ExecuteReader();
 
                 while (dr.Read())

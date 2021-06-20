@@ -28,12 +28,12 @@ namespace Veterinaria
         }
 
         [WebMethod]
-        public static List<Paciente> ListarPacientes()
+        public static List<Paciente> listarPacientes()
         {
             List<Paciente> Lista = null;
             try
             {
-                Lista = PacienteLN.getInstance().ListarPacientes();
+                Lista = PacienteLN.getInstance().listarPacientes();
             }
             catch (Exception ex)
             {

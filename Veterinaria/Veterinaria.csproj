@@ -67,10 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="cerrarSesion.aspx" />
     <Content Include="css\AdminLTE.css" />
     <Content Include="css\bootstrap-slider\slider.css" />
     <Content Include="css\bootstrap-wysihtml5\bootstrap3-wysihtml5.css" />
     <Content Include="css\bootstrap-wysihtml5\bootstrap3-wysihtml5.min.css" />
+    <Content Include="css\bootstrap.min.css" />
     <Content Include="css\colorpicker\bootstrap-colorpicker.css" />
     <Content Include="css\colorpicker\bootstrap-colorpicker.min.css" />
     <Content Include="css\datatables\dataTables.bootstrap.css" />
@@ -81,6 +83,8 @@
     <Content Include="css\datatables\images\sort_desc_disabled.png" />
     <Content Include="css\datepicker\datepicker3.css" />
     <Content Include="css\daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\fonts\fontawesome-webfonts.svg" />
     <Content Include="css\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="css\iCheck\all.css" />
     <Content Include="css\iCheck\flat\aero%402x.png" />
@@ -211,6 +215,7 @@
     <Content Include="css\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="css\images\ui-icons_d8e7f3_256x240.png" />
     <Content Include="css\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="css\ionicons.min.css" />
     <Content Include="css\ionslider\ion.rangeSlider.css" />
     <Content Include="css\ionslider\ion.rangeSlider.skinFlat.css" />
     <Content Include="css\ionslider\ion.rangeSlider.skinNice.css" />
@@ -218,6 +223,7 @@
     <Content Include="css\morris\morris.css" />
     <Content Include="css\timepicker\bootstrap-timepicker.css" />
     <Content Include="css\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="fonts\fontawesome-webfonts.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="img\ajax-loader.gif" />
     <Content Include="img\ajax-loader1.gif" />
@@ -249,6 +255,15 @@
     <Content Include="img\user-bg.png" />
     <Content Include="img\user.jpg" />
     <Content Include="img\user2.jpg" />
+    <Content Include="jAlert\images\error-icon.png" />
+    <Content Include="jAlert\images\help.gif" />
+    <Content Include="jAlert\images\important.gif" />
+    <Content Include="jAlert\images\info.gif" />
+    <Content Include="jAlert\images\message-icon.png" />
+    <Content Include="jAlert\images\title.gif" />
+    <Content Include="jAlert\images\warning-icon.png" />
+    <Content Include="jAlert\jquery.alerts.css" />
+    <Content Include="jAlert\jquery.alerts.js" />
     <Content Include="js\AdminLTE\app.js" />
     <Content Include="js\AdminLTE\dashboard.js" />
     <Content Include="js\AdminLTE\demo.js" />
@@ -389,6 +404,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cerrarSesion.aspx.cs">
+      <DependentUpon>cerrarSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cerrarSesion.aspx.designer.cs">
+      <DependentUpon>cerrarSesion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Custom\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -440,6 +462,14 @@
     <Content Include="js\plugins\input-mask\phone-codes\phone-codes.json" />
     <Content Include="js\plugins\slimScroll\slimScroll.jquery.json" />
     <Content Include="Home.Master" />
+    <Content Include="css\fonts\fontawesome-webfont.eot" />
+    <Content Include="css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="css\fonts\fontawesome-webfont.woff" />
+    <Content Include="css\fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

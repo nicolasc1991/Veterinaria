@@ -9,7 +9,7 @@
     <title>Acceso al Sistema</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.1/collection/components/icon/icon.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.4.0/collection/components/icon/icon.min.css" type="text/css" />
     <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="bg-black">
