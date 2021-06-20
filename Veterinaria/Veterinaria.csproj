@@ -252,6 +252,15 @@
     <Content Include="js\AdminLTE\app.js" />
     <Content Include="js\AdminLTE\dashboard.js" />
     <Content Include="js\AdminLTE\demo.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\horariosmedico.js" />
+    <Content Include="js\jquery-3.1.0.min.js" />
+    <Content Include="js\jquery-ui.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.ui.draggable.js" />
+    <Content Include="js\logout.js" />
+    <Content Include="js\menus.js" />
+    <Content Include="js\paciente.js" />
     <Content Include="js\plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="js\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js" />
     <Content Include="js\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.js" />
@@ -373,6 +382,7 @@
     <Content Include="js\plugins\sparkline\jquery.sparkline.min.js" />
     <Content Include="js\plugins\timepicker\bootstrap-timepicker.js" />
     <Content Include="js\plugins\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="js\reserva.js" />
     <Content Include="Login.aspx" />
     <Content Include="PanelGeneral.aspx" />
     <Content Include="RegistrarAnimales.aspx" />

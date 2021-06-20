@@ -26,8 +26,7 @@ namespace CapaAccesoDatos
         {
             SqlConnection conexion = new SqlConnection();
             conexion.ConnectionString = "Data Source=SQL5097.site4now.net;Initial Catalog=db_a7554f_veterinaria;User Id=db_a7554f_veterinaria_admin;Password=veterinaria2021";
-            return conexion
-    ; ;
+            return conexion;
         }
     }
 }
