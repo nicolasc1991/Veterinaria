@@ -147,25 +147,33 @@
                             <span>Reserva de turno</span>
                         </a>
                     </li>
+                    <li class="active">
+                        <a href="Usuarios.aspx">
+                            <i class="fa fa-th"></i>
+                            <span>Usuarios</span>
+                        </a>
+                    </li>
                 </ul>
+                 
             </section>
         </aside>
          <aside class="right-side">
-        <section class="content-header">
-            <h1>
-                <asp:Label ID="lblOpcionMenu" runat="server" Text="Panel General"></asp:Label>
-            </h1>
-        </section>
-        <section class="content">
-            <form id="form1" runat="server">
-                <div>
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                        <!-- CARGAR DISEÑO QUE HERDA LA MASTER PAGE -->
-                    </asp:ContentPlaceHolder>
-                </div>
-
-            </form>
-        </section>
+             <form id="form1" runat="server">
+                 <section class="content-header">
+                     <h1>
+                         <asp:Label ID="lblOpcionMenu" runat="server" Text="Panel General"></asp:Label>
+                     </h1>
+                     <asp:LinkButton ID="lnkCerrarSesion" runat="server" OnClick="lnkCerrarSesion_Click">Cerrar sesión</asp:LinkButton>
+                 </section>
+                 <section class="content">
+                     <div>
+                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                             <!-- CARGAR DISEÑO QUE HERDA LA MASTER PAGE -->
+                         </asp:ContentPlaceHolder>
+                     </div>
+                     
+                 </section>
+             </form>
     </aside>
     </div><!-- FIN DEL WRAPPER -->
    

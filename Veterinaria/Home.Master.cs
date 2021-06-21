@@ -13,5 +13,13 @@ namespace Veterinaria
         {
 
         }
+
+        protected void lnkCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session["ID"] = null;
+            Session.Abandon();
+            Response.Redirect("~/Login.aspx");
+        }
     }
 }
