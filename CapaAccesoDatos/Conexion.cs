@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace CapaAccesoDatos
 {
@@ -25,8 +26,14 @@ namespace CapaAccesoDatos
         public SqlConnection ConexionDB()
         {
             SqlConnection conexion = new SqlConnection();
-            conexion.ConnectionString = "Data Source=SQL5097.site4now.net;Initial Catalog=db_a7554f_veterinaria;User Id=db_a7554f_veterinaria_admin;Password=veterinaria2021";
+            //conexion.ConnectionString = "Data Source=SQL5097.site4now.net;Initial Catalog=db_a7554f_veterinaria;User Id=db_a7554f_veterinaria_admin;Password=veterinaria2021";
+            conexion.ConnectionString = GetConnectionString();
             return conexion;
+        }
+
+        public String GetConnectionString()
+        {
+            return ConfigurationManager.ConnectionStrings["local_veterinaria"].ConnectionString;
         }
     }
 }

@@ -153,9 +153,9 @@
                         </a>
                     </li>
                     <li class="active">
-                        <a href="ReservaTurno.aspx">
+                        <a href="RegistrarUsuario.aspx">
                             <i class="fa fa-th"></i>
-                            <span>Reserva de turno</span>
+                            <span>Registrar Usuario</span>
                         </a>
                     </li>
                     <li class="active">
