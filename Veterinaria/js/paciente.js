@@ -17,7 +17,6 @@ function addRow() {
         $("#tbl_body_table").append(template);
     }
 }
-
 var tabla, data;
 
 function addRowDT(data) {
@@ -36,7 +35,7 @@ function addRowDT(data) {
         ]
     });
 
-    tabla.fnClearTable();
+    /*tabla.fnClearTable();*/
 
     for (var i = 0; i < data.length; i++) {
         tabla.fnAddData([
@@ -57,7 +56,7 @@ function addRowDT(data) {
 function sendDataAjax() {
     $.ajax({
         type: "POST",
-        url: "GestionarPaciente.aspx/ListarPacientes",
+        url: "RegistrarAnimales.aspx/ListarPacientes",
         data: {},
         contentType: 'application/json; charset=utf-8',
         error: function (xhr, ajaxOptions, thrownError) {
@@ -75,7 +74,7 @@ function updateDataAjax() {
 
     $.ajax({
         type: "POST",
-        url: "GestionarPaciente.aspx/ActualizarDatosPaciente",
+        url: "RegistrarAnimales.aspx/ActualizarDatosPaciente",
         data: obj,
         dataType: "json",
         contentType: 'application/json; charset=utf-8',
@@ -98,7 +97,7 @@ function deleteDataAjax(data) {
 
     $.ajax({
         type: "POST",
-        url: "GestionarPaciente.aspx/EliminarDatosPaciente",
+        url: "RegistrarAnimales.aspx/EliminarDatosPaciente",
         data: obj,
         dataType: "json",
         contentType: 'application/json; charset=utf-8',
