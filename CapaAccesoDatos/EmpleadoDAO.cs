@@ -79,6 +79,9 @@ namespace CapaAccesoDatos
                 cmd.Parameters.AddWithValue("@prmApMaterno", objEmpleado.ApMaterno);
                 cmd.Parameters.AddWithValue("@prmNroDoc", objEmpleado.NroDocumento);
                 cmd.Parameters.AddWithValue("@prmEstado", objEmpleado.Estado);
+                cmd.Parameters.AddWithValue("@prmClave", objEmpleado.Clave);
+                cmd.Parameters.AddWithValue("@prmUsuario", objEmpleado.Usuario);
+                cmd.Parameters.AddWithValue("@prmIdTipoEmpleado", objEmpleado.IdTipoEmpleado);
                 con.Open();
 
                 int filas = cmd.ExecuteNonQuery();
@@ -122,6 +125,7 @@ namespace CapaAccesoDatos
                     objEmpleado.ApMaterno = dr["apMaterno"].ToString();
                     objEmpleado.NroDocumento = dr["nroDocumento"].ToString();
                     objEmpleado.Usuario = dr["usuario"].ToString();
+                    objEmpleado.Clave = dr["clave"].ToString();
                     objEmpleado.Estado = true;
 
                     // añadir a la lista de objetos

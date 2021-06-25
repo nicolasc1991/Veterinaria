@@ -7,6 +7,7 @@
     template += ("<td>" + "123" + "</td>");
     template += ("<td>" + "123" + "</td>");
     template += ("<td>" + "123" + "</td>");
+    template += ("<td>" + "123" + "</td>");
     template += "</tr>";
     return template;
 }
@@ -14,17 +15,19 @@
 function addRow() {
     var template = templateRow();
     for (var i = 0; i < 10; i++) {
-        $("#tbl_pacientes_table").append(template);
+        $("#tbl_empleados_table").append(template);
     }
 }
 var tabla, data;
 
-function addRowDTP(data) {
-    tabla = $("#tbl_pacientes").DataTable({
+function addRowDTE(data) {
+    tabla = $("#tbl_empleados").DataTable({
         "aaSorting": [[0, 'desc']],
         "bSort": true,
         "bDestroy": true,
         "aoColumns": [
+            null,
+            null,
             null,
             null,
             null,
@@ -39,12 +42,14 @@ function addRowDTP(data) {
 
     for (var i = 0; i < data.length; i++) {
         tabla.fnAddData([
-            data[i].IdPaciente,
-            data[i].Nombres,
+            data[i].ID,
+            data[i].Nombre,
             (data[i].ApPaterno + " " + data[i].ApMaterno),
-            ((data[i].Sexo == 'M')? "Masculino": "Femenino"),
-            data[i].Edad,
-            data[i].Direccion,
+            data[i].Usuario,
+            data[i].IdTipoEmpleado,
+            data[i].NroDocumento,
+            data[i].Clave,
+            data[i].Estado,
             '<button type="button" value="Actualizar" title="Actualizar" class="btn btn-primary btn-edit" data-target="#imodal" data-toggle="modal"><i class="fa fa-check-square-o" aria-hidden="true"></i></button>&nbsp;' +
             '<button type="button" value="Eliminar" title="Eliminar" class="btn btn-danger btn-delete"><i class="fa fa-minus-square-o" aria-hidden="true"></i></button>'
            
@@ -53,17 +58,17 @@ function addRowDTP(data) {
     //  ((data[i].Estado == true) ? "Activo" : "Inactivo")
 }
 
-function sendDataAjax() {
+function EmpleadoDataAjax() {
     $.ajax({
         type: "POST",
-        url: "RegistrarAnimales.aspx/ListarPacientes",
+        url: "Usuarios.aspx/ListarEmpleados",
         data: {},
         contentType: 'application/json; charset=utf-8',
         error: function (xhr, ajaxOptions, thrownError) {
             console.log(xhr.status + " \n" + xhr.responseText, "\n" + thrownError);
         },
         success: function (data) {
-            addRowDTP(data.d);
+            addRowDTE(data.d);
         }
     });
 }
@@ -74,7 +79,7 @@ function updateDataAjax() {
 
     $.ajax({
         type: "POST",
-        url: "RegistrarAnimales.aspx/ActualizarDatosPaciente",
+        url: "Usuarios.aspx/ActualizarDatosEmpleados",
         data: obj,
         dataType: "json",
         contentType: 'application/json; charset=utf-8',
@@ -97,7 +102,7 @@ function deleteDataAjax(data) {
 
     $.ajax({
         type: "POST",
-        url: "RegistrarAnimales.aspx/EliminarDatosPaciente",
+        url: "Usuarios.aspx/EliminarDatosEmpleados",
         data: obj,
         dataType: "json",
         contentType: 'application/json; charset=utf-8',
@@ -136,7 +141,7 @@ $(document).on('click', '.btn-delete', function (e) {
     // paso 1: enviar el id al servidor por medio de ajax
     deleteDataAjax(dataRow[0]);
     // paso 2: renderizar el datatable
-    sendDataAjax();
+    EmpleadoDataAjax();
 
 });
 
@@ -154,4 +159,4 @@ $("#btnactualizar").click(function (e) {
 });
 
 // Llamando a la funcion de ajax al cargar el documento
-sendDataAjax();
+EmpleadoDataAjax();
