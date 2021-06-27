@@ -81,6 +81,7 @@
     <Content Include="css\datatables\images\sort_desc_disabled.png" />
     <Content Include="css\datepicker\datepicker3.css" />
     <Content Include="css\daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="css\font-awesome.min.css" />
     <Content Include="css\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="css\iCheck\all.css" />
     <Content Include="css\iCheck\flat\aero%402x.png" />
@@ -269,6 +270,7 @@
     <Content Include="dist\js\pages\dashboard.js" />
     <Content Include="dist\js\pages\dashboard2.js" />
     <Content Include="dist\js\pages\dashboard3.js" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="img\ajax-loader.gif" />
     <Content Include="img\ajax-loader1.gif" />
@@ -312,6 +314,7 @@
     <Content Include="js\jquery.ui.draggable.js" />
     <Content Include="js\logout.js" />
     <Content Include="js\menus.js" />
+    <Content Include="js\empleados.js" />
     <Content Include="js\paciente.js" />
     <Content Include="js\plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="js\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js" />
@@ -2347,6 +2350,11 @@
     <Content Include="dist\js\.eslintrc.json" />
     <Content Include="dist\js\adminlte.js.map" />
     <Content Include="dist\js\adminlte.min.js.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="packages.config" />
     <Content Include="plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css.map" />
     <Content Include="plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.min.css.map" />
@@ -2427,6 +2435,9 @@
       <Project>{d85bf2ee-863f-4112-b12d-7fdc2956e0ad}</Project>
       <Name>CapaLogica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
