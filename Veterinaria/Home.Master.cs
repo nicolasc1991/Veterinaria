@@ -21,5 +21,6 @@ namespace Veterinaria
             Session.Abandon();
             Response.Redirect("~/Login.aspx");
         }
+
     }
 }

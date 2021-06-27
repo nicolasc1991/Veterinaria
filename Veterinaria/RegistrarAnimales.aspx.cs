@@ -72,10 +72,8 @@ namespace Veterinaria
             objPaciente.IdPaciente = 0;
             objPaciente.Nombres = txtNombres.Text;
             objPaciente.ApPaterno = txtApPaterno.Text;
-            objPaciente.ApMaterno = txtApMaterno.Text;
             objPaciente.Edad = Convert.ToInt32(txtEdad.Text);
             objPaciente.Sexo = (ddlSexo.SelectedValue == "Femenino") ? 'F' : 'M'; // Masculino , Femenino
-            objPaciente.NroDocumento = txtNroDocumento.Text;
             objPaciente.Direccion = txtDireccion.Text;
             objPaciente.Telefono = txtTelefono.Text;
             objPaciente.Estado = true;

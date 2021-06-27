@@ -15,15 +15,6 @@ namespace Veterinaria
     {
 
         /// <summary>
-        /// Control txtNroDocumento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNroDocumento;
-
-        /// <summary>
         /// Control txtNombres.
         /// </summary>
         /// <remarks>
@@ -42,13 +33,13 @@ namespace Veterinaria
         protected global::System.Web.UI.WebControls.TextBox txtApPaterno;
 
         /// <summary>
-        /// Control txtApMaterno.
+        /// Control txtEdad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApMaterno;
+        protected global::System.Web.UI.WebControls.TextBox txtEdad;
 
         /// <summary>
         /// Control ddlSexo.
@@ -58,15 +49,6 @@ namespace Veterinaria
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlSexo;
-
-        /// <summary>
-        /// Control txtEdad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEdad;
 
         /// <summary>
         /// Control txtTelefono.

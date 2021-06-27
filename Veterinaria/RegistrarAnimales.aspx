@@ -11,28 +11,22 @@
                 <div class="box box-primary">
                     <div class="box-body">
                         <div class="form-group">
-                            <label>DOCUMENTO DE IDENTIDAD</label>
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="txtNroDocumento" runat="server" Text="" CssClass="form-control"></asp:TextBox>
-                        </div>
-                        <div class="form-group">
                             <label>NOMBRES</label>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txtNombres" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label>APELLIDO PATERNO</label>
+                            <label>APELLIDO</label>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txtApPaterno" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label>APELLIDO MATERNO</label>
+                            <label>EDAD</label>
                         </div>
                         <div class="form-group">
-                            <asp:TextBox ID="txtApMaterno" runat="server" Text="" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtEdad" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -48,12 +42,6 @@
                                 <asp:ListItem>Masculino</asp:ListItem>
                                 <asp:ListItem>Femenino</asp:ListItem>
                             </asp:DropDownList>
-                        </div>
-                        <div class="form-group">
-                            <label>EDAD</label>
-                        </div>
-                        <div class="form-group">
-                            <asp:TextBox ID="txtEdad" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
                             <label>TELÉFONO</label>
@@ -145,4 +133,5 @@
             </div>
         </div>
     </div>
+    <script src="js/paciente.js"></script>
 </asp:Content>
