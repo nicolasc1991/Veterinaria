@@ -95,7 +95,7 @@
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
-                            <tbody id="tbl_body_table">
+                            <tbody id="tbl_pacientes_table">
                                 <!-- DATA POR MEDIO DE AJAX-->
                             </tbody>
                         </table>
@@ -133,5 +133,8 @@
             </div>
         </div>
     </div>
+    <script src="js/paciente.js"></script>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="footer" runat="server">
     <script src="js/paciente.js"></script>
 </asp:Content>
