@@ -20,8 +20,7 @@ namespace CapaEntidad
         public bool Estado { get; set; }
         public String Imagen { get; set; }
         public HistoriaClinica PHistoriaClinica { get; set; }
-
-
+        public String Create { get; set; }
         public Paciente() : this(0, "", "", "", 0, ' ', "", "", "", false, "", new HistoriaClinica()) { }
 
 

@@ -21,9 +21,13 @@ namespace Veterinaria
             {
                 Response.Redirect("Login.aspx");
             }
-            if (!Page.IsPostBack)
+            if (Convert.ToInt32(Session["IdTipoEmpleado"]) == 1)
             {
-                // Page.ClientScript.RegisterClientScriptInclude("pacientejs", "js/paciente.js");
+
+            }
+            else
+            {
+                Response.Redirect("PanelGeneral.aspx");
             }
         }
 
@@ -56,11 +60,11 @@ namespace Veterinaria
         }
 
         [WebMethod]
-        public static bool EliminarDatosPaciente(String id)
+        public static bool EliminarDatosPaciente(String id,Paciente objPaciente)
         {
             Int32 idPaciente = Convert.ToInt32(id);
 
-            bool ok = PacienteLN.getInstance().Eliminar(idPaciente);
+            bool ok = PacienteLN.getInstance().Eliminar(idPaciente,objPaciente);
 
             return ok;
 
@@ -77,6 +81,7 @@ namespace Veterinaria
             objPaciente.Direccion = txtDireccion.Text;
             objPaciente.Telefono = txtTelefono.Text;
             objPaciente.Estado = true;
+            objPaciente.Create = (string)Session["Usuario"];
 
             return objPaciente;
         }

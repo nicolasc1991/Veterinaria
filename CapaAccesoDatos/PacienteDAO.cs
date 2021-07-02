@@ -43,6 +43,7 @@ namespace CapaAccesoDatos
                 cmd.Parameters.AddWithValue("@prmDireccion", objPaciente.Direccion);
                 cmd.Parameters.AddWithValue("@prmTelefono", objPaciente.Telefono);
                 cmd.Parameters.AddWithValue("@prmEstado", objPaciente.Estado);
+                cmd.Parameters.AddWithValue("@prmUser", objPaciente.Create);
                 con.Open();
 
                 int filas = cmd.ExecuteNonQuery();
@@ -118,6 +119,7 @@ namespace CapaAccesoDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@prmIdPaciente", objPaciente.IdPaciente);
                 cmd.Parameters.AddWithValue("@prmDireccion", objPaciente.Direccion);
+                cmd.Parameters.AddWithValue("@prmUser", objPaciente.Create);
 
                 conexion.Open();
 
@@ -136,7 +138,7 @@ namespace CapaAccesoDatos
             return ok;
         }
 
-        public bool Eliminar(int id)
+        public bool Eliminar(int id,Paciente objPaciente)
         {
             SqlConnection conexion = null;
             SqlCommand cmd = null;
@@ -146,6 +148,7 @@ namespace CapaAccesoDatos
                 conexion = Conexion.getInstance().ConexionDB();
                 cmd = new SqlCommand("spEliminarPaciente", conexion);
                 cmd.Parameters.AddWithValue("@prmIdPaciente", id);
+                cmd.Parameters.AddWithValue("@prmUser", objPaciente.Create);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 conexion.Open();

@@ -17,9 +17,17 @@ namespace Veterinaria.js
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["ID"] == null)
+            if (Session["ID"] == null && Convert.ToInt32(Session["IdTipoEmpleado"]) == 1)
             {
                 Response.Redirect("Login.aspx");
+            }
+            if (Convert.ToInt32(Session["IdTipoEmpleado"]) == 1)
+            {
+
+            }
+            else
+            {
+                Response.Redirect("PanelGeneral.aspx");
             }
         }
         [WebMethod]
@@ -72,7 +80,7 @@ namespace Veterinaria.js
             objEmpleado.NroDocumento = txtNroDocumento.Text;
             objEmpleado.Clave = GenerarMD5.crearMD5(txtClave.Text);
             objEmpleado.Estado = true;
-
+            objEmpleado.Create = (string)Session["Usuario"];
             return objEmpleado;
         }
 
