@@ -29,6 +29,7 @@ namespace Veterinaria
                 Session["Nombre"] = objEmpleado.Nombre;
                 Session["Apellidos"] = objEmpleado.ApPaterno + " " + objEmpleado.ApMaterno;
                 Session["Estado"] = objEmpleado.Estado;
+                Session["IdTipoEmpleado"] = objEmpleado.IdTipoEmpleado;
                 if (objEmpleado.Estado == true)
                 {
                     Response.Redirect("PanelGeneral.aspx");

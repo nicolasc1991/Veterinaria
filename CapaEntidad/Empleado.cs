@@ -19,7 +19,7 @@ namespace CapaEntidad
         public String Imagen { get; set; }
         public String Usuario { get; set; }
         public String Clave { get; set; }
-
+        public String Create { get; set; }
         public Empleado()
         {
 

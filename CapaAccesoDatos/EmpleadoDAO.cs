@@ -82,6 +82,7 @@ namespace CapaAccesoDatos
                 cmd.Parameters.AddWithValue("@prmClave", objEmpleado.Clave);
                 cmd.Parameters.AddWithValue("@prmUsuario", objEmpleado.Usuario);
                 cmd.Parameters.AddWithValue("@prmIdTipoEmpleado", objEmpleado.IdTipoEmpleado);
+                cmd.Parameters.AddWithValue("@prmUser", objEmpleado.Create);
                 con.Open();
 
                 int filas = cmd.ExecuteNonQuery();

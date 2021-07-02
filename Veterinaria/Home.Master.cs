@@ -11,7 +11,16 @@ namespace Veterinaria
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Label1.Text = (string)Session["Nombre"];
+            if (Convert.ToInt32(Session["IdTipoEmpleado"])==1) {
+                MenuUser.Visible = false;
+                MenuAdmin.Visible = true;
+            }
+            else
+            {
+                MenuAdmin.Visible = false;
+                MenuUser.Visible = true;
+            }
         }
 
         protected void lnkCerrarSesion_Click(object sender, EventArgs e)

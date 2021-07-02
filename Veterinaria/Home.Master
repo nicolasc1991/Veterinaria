@@ -121,46 +121,59 @@
     </header>
     <div class="wrapper row-offcanvas row-offcanvas-left">
         <aside class="left-side sidebar-offcanvas">
-            <section class="sidebar">
-                <div class="user-panel">
-                    <div class="pull-left image">
-                        <img src="img/pichichus.jpg" class="img-circle" alt="User Image" />
+            
+            <asp:ContentPlaceHolder ID="MenuAdmin" runat="server">
+                <section class="sidebar">
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="img/pichichus.jpg" class="img-circle" alt="User Image" />
+                        </div>
+                        <div class="pull-left info">
+                            <p>
+                                Bienvenido
+                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                            </p>
+                        </div>
                     </div>
-                    <div class="pull-left info">
-                        <p>Bienvenido Administrador</p>
-                    </div>
-                </div>
-                <ul class="sidebar-menu">
-                    <li class="active">
-                        <a href="PanelGeneral.aspx">
-                            <i class="fa fa-dashboard"></i>
-                            <span>Panel General</span>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="RegistrarAnimales.aspx">
-                            <i class="fa fa-paw"></i>
-                            <span>Registrar Animal</span>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="#">
-                            <i class="fa fa-calendar"></i>
-                            <span>Reserva de turno</span>
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="Usuarios.aspx">
-                            <i class="fa fa-users"></i>
-                            <span>Usuarios</span>
-                        </a>
-                    </li>
-                    <li class="active">
+                    <ul class="sidebar-menu">
+                        <li class="active"><a href="PanelGeneral.aspx"><i class="fa fa-dashboard"></i><span>Panel General</span> </a></li>
+                        <li class="active"><a href="RegistrarAnimales.aspx"><i class="fa fa-paw"></i><span>Registrar Animal</span> </a></li>
+                        <li class="active"><a href="RegistroTurnos.aspx"><i class="fa fa-calendar"></i><span>Reserva de turno</span> </a></li>
+                        <li class="active"><a href="Usuarios.aspx"><i class="fa fa-users"></i><span>Usuarios</span> </a></li>
+                        <li class="active"><a href="Bitacora.aspx"><i class="fa fa-book"></i><span>Bitacora</span> </a></li>
+                        <li class="active">
                             <asp:LinkButton ID="lnkCerrarSesion" runat="server" OnClick="lnkCerrarSesion_Click">Cerrar sesión</asp:LinkButton>
-                    </li>
-                </ul>
-
-            </section>
+                        </li>
+                    </ul>
+                </section>
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="MenuUser" runat="server">
+                <section class="sidebar">
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="img/pichichus.jpg" class="img-circle" alt="User Image" />
+                        </div>
+                        <div class="pull-left info">
+                            <p>
+                                Bienvenido
+                                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="sidebar-menu">
+                               <%--<li class="active">
+                                    <a href="RegistrarAnimales.aspx">
+                                        <i class="fa fa-paw"></i>
+                                        <span>Registrar Animal</span>
+                                    </a>
+                                </li>--%>
+                                <li class="active"><a href="#"><i class="fa fa-calendar"></i><span>Reserva de turno</span> </a></li>
+                        <li class="active">
+                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="lnkCerrarSesion_Click">Cerrar sesión</asp:LinkButton>
+                        </li>
+                    </ul>
+                </section>
+            </asp:ContentPlaceHolder>
         </aside>
         <aside class="right-side">
             
@@ -171,12 +184,9 @@
                     
                 </section>
                 <section class="content">
-                    <div>
                         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                             <!-- CARGAR DISEÑO QUE HERDA LA MASTER PAGE -->
                         </asp:ContentPlaceHolder>
-                    </div>
-
                 </section>
             
         </aside>

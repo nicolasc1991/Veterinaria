@@ -59,11 +59,11 @@ namespace CapaLogica
             }
         }
 
-        public bool Eliminar(int id)
+        public bool Eliminar(int id, Paciente objPaciente)
         {
             try
             {
-                return PacienteDAO.getInstance().Eliminar(id);
+                return PacienteDAO.getInstance().Eliminar(id,objPaciente);
             }
             catch (Exception ex)
             {
